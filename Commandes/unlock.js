@@ -4,7 +4,7 @@ module.exports = {
 
     name: "unlock",
     description: "Unlock un salon",
-    utilisation: "!ban",
+    utilisation: "!unlock",
     permission: Discord.PermissionFlagsBits.ManageChannels,
     dm: false,
     category: "Modération",

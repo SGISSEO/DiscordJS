@@ -5,7 +5,7 @@ module.exports = {
 
     name: "reactionrole",
     description: "Envoie le reaction role",
-    utilisation: "!ban",
+    utilisation: "!reactionrole",
     permission: Discord.PermissionFlagsBits.ManageGuild,
     dm: false,
     category: "Administration",

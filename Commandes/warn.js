@@ -40,9 +40,9 @@ module.exports = {
         if(message.member.roles.highest.comparePositionTo(member.roles.highest) <= 0) return message.reply("Tu ne peux pas warn ce membre !")
         if((await message.guild.members.fetchMe()).roles.highest.comparePositionTo(member.roles.highest) <= 0) return message.reply("Le robot ne peut pas warn ce membre !")
 
-        try { await user.send(`${message.user.tag} vous a warn sur le serveur ${message.guild.name} pour la raison : \`${reason}\` !`) } catch (err) {}
+        try { await user.send(`${message.user} vous a warn sur le serveur ${message.guild.name} pour la raison : \`${reason}\` !`) } catch (err) {}
 
-        await message.reply(`Vous avez warn ${user.tag} pour la raison : \`${reason}\` avec succès !`)
+        await message.reply(`Vous avez warn ${user} pour la raison : \`${reason}\` avec succès !`)
 
         let ID = await bot.function.createId("WARN")
 

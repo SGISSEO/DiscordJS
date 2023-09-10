@@ -5,7 +5,7 @@ module.exports = {
 
     name: "rank",
     description: "Donne l'xp d'un membre",
-    utilisation: "!ban",
+    utilisation: "!rank",
     permission: "Aucune",
     dm: false,
     category: "Expérience",
@@ -48,6 +48,13 @@ module.exports = {
                 let level = parseInt(req[0].level)
                 let rank = leaderboard.findIndex(r => r.user === user.id) + 1
                 let need = (level + 1) * 1000;
+
+
+            // Construisez le message de niveau en utilisant les vraies données du niveau de l'utilisateur
+            const levelUpMessage = `Félicitations ${user}, vous avez atteint le niveau ${level} !`;
+
+            // Envoyez le message dans le canal
+            message.channel.send(levelUpMessage);
 
                 let Card = await new Canvas.Card()
                 .setBackground("https://cdn.supercell.com/supercell.com/221208091344/supercell.com/files/games_thumbnail_clashofclans.jpg")

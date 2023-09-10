@@ -4,7 +4,7 @@ module.exports = {
 
     name: "setantiraid",
     description: "Paramètre l'antiraid",
-    utilisation: "!ban",
+    utilisation: "!setantiraid",
     permission: Discord.PermissionFlagsBits.ManageGuild,
     dm: false,
     category: "Administration",

@@ -4,7 +4,7 @@ module.exports = {
 
     name: "ping",
     description: "Affiche la latence",
-    utilisation: "!ban",
+    utilisation: "!ping",
     permission: "Aucune",
     dm: true,
     category: "Informations",

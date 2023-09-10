@@ -5,7 +5,7 @@ module.exports = {
 
     name: "clear",
     description: "Efface beaucoup de messages",
-    utilisation: "!ban",
+    utilisation: "!clear",
     permission: Discord.PermissionFlagsBits.ManageMessages,
     dm: false,
     category: "Modération",

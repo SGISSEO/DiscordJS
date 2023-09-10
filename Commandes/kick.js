@@ -4,7 +4,7 @@ module.exports = {
 
     name: "kick",
     description: "Kick un membre",
-    utilisation: "!ban",
+    utilisation: "!kick",
     permission: Discord.PermissionFlagsBits.KickMembers,
     dm: false,
     category: "Modération",

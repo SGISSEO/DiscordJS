@@ -4,7 +4,7 @@ module.exports = {
 
     name: "help",
     description: "Donne les commandes du robot",
-    utilisation: "!ban",
+    utilisation: "!help",
     permission: "Aucune",
     dm: true,
     category: "Informations",

@@ -5,7 +5,7 @@ module.exports = {
 
     name: "unmute",
     description: "Unmute un membre",
-    utilisation: "!ban",
+    utilisation: "!unmute",
     permission: Discord.PermissionFlagsBits.ModerateMembers,
     dm: false,
     category: "Modération",

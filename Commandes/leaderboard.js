@@ -5,7 +5,7 @@ module.exports = {
 
     name: "leaderboard",
     description: "Donne le classement de l'expérience du serveur",
-    utilisation: "!ban",
+    utilisation: "!leaderboard",
     permission: "Aucune",
     dm: false,
     category: "Expérience",

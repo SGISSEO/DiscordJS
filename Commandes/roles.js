@@ -5,7 +5,7 @@ module.exports = {
 
     name: "roles",
     description: "Ajoute ou retire un rôle au reaction roles",
-    utilisation: "!ban",
+    utilisation: "!roles",
     permission: Discord.PermissionFlagsBits.ManageGuild,
     dm: false,
     category: "Administration",

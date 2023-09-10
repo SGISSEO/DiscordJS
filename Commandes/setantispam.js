@@ -4,7 +4,7 @@ module.exports = {
 
     name: "setantispam",
     description: "Paramètre l'antispam",
-    utilisation: "!ban",
+    utilisation: "!setantispam",
     permission: Discord.PermissionFlagsBits.ManageGuild,
     dm: false,
     category: "Administration",

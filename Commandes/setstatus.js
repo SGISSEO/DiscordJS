@@ -1,7 +1,6 @@
 const Discord = require("discord.js")
 
 module.exports = {
-
     name: "setstatus",
     description: "Change le status du bot",
     utilisation: "!ban",
@@ -31,17 +30,29 @@ module.exports = {
     ],
 
     async run(bot, message, args, db) {
-
         let activity = args.getString("activité")
-        if(activity !== "Listening" && activity !== "Playing" && activity !== "Competing" && activity !== "Watching" && activity !== "Streaming") return message.reply("Merci de suivre l'autocomplete")
+        if (activity !== "Listening" && activity !== "Playing" && activity !== "Competing" && activity !== "Watching" && activity !== "Streaming") {
+            return message.reply("Merci de suivre l'autocomplete");
+        }
 
         let status = args.getString("status")
 
-        if(activity === "Streaming" && args.getString("lien") === null) return message.reply("Indiquer une URL")
-        if(activity === "Streaming" && !args.getString("lien").match(new RegExp(/^(?:https?:\/\/)?(?:www\.|go\.)?twitch\.tv\/([a-z0-9_]+)($|\?)/))) return message.reply("Indiquer une URL Twitch")
+        if (activity === "Streaming" && args.getString("lien") === null) {
+            return message.reply("Indiquer une URL");
+        }
+        if (activity === "Streaming" && !args.getString("lien").match(new RegExp(/^(?:https?:\/\/)?(?:www\.|go\.)?twitch\.tv\/([a-z0-9_]+)($|\?)/))) {
+            return message.reply("Indiquer une URL Twitch");
+        }
 
-        if(activity === "Streaming") await bot.user.setActivity(status, {type: Discord.ActivityType[activity], url: args.getString("lien")})
-        else await bot.user.setActivity(status, {type: Discord.ActivityType[activity]})
-        await message.reply("Status mis à jour !")
+        if (activity === "Streaming") {
+            await bot.user.setActivity(status, { type: Discord.ActivityType[activity], url: args.getString("lien") });
+        } else {
+            await bot.user.setActivity(status, { type: Discord.ActivityType[activity] });
+        }
+
+        // Rajoute la présence "Ne pas déranger"
+        await bot.user.setStatus("dnd");
+
+        await message.reply("Status mis à jour !");
     }
 }

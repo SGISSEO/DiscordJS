@@ -4,7 +4,7 @@ module.exports = {
 
     name: "setcaptcha",
     description: "Paramètre le captcha",
-    utilisation: "!ban",
+    utilisation: "!setcaptcha",
     permission: Discord.PermissionFlagsBits.ManageGuild,
     dm: false,
     category: "Administration",
